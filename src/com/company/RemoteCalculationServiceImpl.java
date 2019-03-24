@@ -9,8 +9,12 @@ import java.util.Stack;
 public class RemoteCalculationServiceImpl implements RemoteCalculationService {
 
     public static final String BINDING_NAME = "sample/CalcService";
+    static Addition addService;
 
-    private static int sum(int a, int b) { return a+b; }
+    private static int sum(int a, int b) throws Exception
+    {
+        return addService.Add(a,b);
+    }
 
     private static int sub(int a, int b) { return b-a; }
 
@@ -25,11 +29,16 @@ public class RemoteCalculationServiceImpl implements RemoteCalculationService {
         for (Object op : str.split(",")){
             expression.add(op);
         }
+
         for (Object s : expression){
             switch(s.toString()) {
                 case "+":
                     // вызов удаленного метода
-                    stack.push(sum(stack.pop(), stack.pop()));
+                    try {
+                        stack.push(sum(stack.pop(), stack.pop()));
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                     break;
                 case "-":
                     // вызов удаленного метода
@@ -61,6 +70,11 @@ public class RemoteCalculationServiceImpl implements RemoteCalculationService {
         return res;
     }
 
+    private static void RegistryServices() throws Exception{
+        Registry registryOperations = LocateRegistry.getRegistry("localhost", 2100);
+        addService = (Addition) registryOperations.lookup("sample/Addition");
+    }
+
     public static void main(String... args) throws Exception {
         System.out.print("Starting registry...");
         final Registry registry = LocateRegistry.createRegistry(2099);
@@ -72,6 +86,12 @@ public class RemoteCalculationServiceImpl implements RemoteCalculationService {
         System.out.print("Binding service...");
         registry.bind(BINDING_NAME, stub);
         System.out.println(" OK");
+
+        try {
+            RegistryServices();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         while (true) {
             Thread.sleep(Integer.MAX_VALUE);
