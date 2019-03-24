@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd6da41e-ecfa-4055-86eb-098f1730960a" name="Default Changelist" comment="" />
+    <list default="true" id="dd6da41e-ecfa-4055-86eb-098f1730960a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/RemoteHelloServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/RemoteHelloServiceImpl.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,10 +15,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/company/RemoteHelloServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/RemoteCalculationServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="1122">
+              <caret line="66" column="34" lean-forward="true" selection-start-line="66" selection-start-column="34" selection-end-line="66" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -24,16 +27,16 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/HelloServiceClient.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/CalculationServiceClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+            <state relative-caret-position="187">
+              <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/RemoteHelloService.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/RemoteCalculationService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
               <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
@@ -60,18 +63,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/company/RemoteHelloService.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/company/RemoteHelloServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/company/RemoteHelloService.java" />
         <option value="$PROJECT_DIR$/src/com/company/HelloServiceClient.java" />
+        <option value="$PROJECT_DIR$/src/com/company/RemoteHelloServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/company/RemoteCalculationServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/company/CalculationServiceClient.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="20" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -79,6 +83,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -87,17 +92,27 @@
               <item name="CalcRMI" type="b2602c69:ProjectViewProjectNode" />
               <item name="CalcRMI" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="CalcRMI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CalcRMI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CalcRMI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CalcRMI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553414764377" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553433441798" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
@@ -113,9 +128,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.HelloServiceClient">
-    <configuration name="HelloServiceClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.HelloServiceClient" />
+  <component name="RunManager" selected="Application.RemoteCalculationServiceImpl">
+    <configuration name="CalculationServiceClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.CalculationServiceClient" />
       <module name="CalcRMI" />
       <extension name="coverage">
         <pattern>
@@ -127,8 +142,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.RemoteHelloServiceImpl" />
+    <configuration name="RemoteCalculationServiceImpl" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.RemoteCalculationServiceImpl" />
       <module name="CalcRMI" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -137,13 +152,13 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.HelloServiceClient" />
+      <item itemvalue="Application.RemoteCalculationServiceImpl" />
+      <item itemvalue="Application.CalculationServiceClient" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HelloServiceClient" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.CalculationServiceClient" />
+        <item itemvalue="Application.RemoteCalculationServiceImpl" />
       </list>
     </recent_temporary>
   </component>
@@ -159,16 +174,18 @@
       <updated>1553410679334</updated>
       <workItem from="1553410680705" duration="507000" />
       <workItem from="1553413895902" duration="707000" />
+      <workItem from="1553414859912" duration="5800000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3343000" />
+    <option name="totallyTimeSpent" value="9912000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -178,7 +195,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -203,14 +220,14 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/company/HelloServiceClient.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/CalculationServiceClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        <state relative-caret-position="187">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/RemoteHelloService.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/RemoteCalculationService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
@@ -220,10 +237,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/RemoteHelloServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/RemoteCalculationServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="1122">
+          <caret line="66" column="34" lean-forward="true" selection-start-line="66" selection-start-column="34" selection-end-line="66" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
