@@ -11,19 +11,24 @@ public class RemoteCalculationServiceImpl implements RemoteCalculationService {
     public static final String BINDING_NAME = "sample/CalcService";
     static Addition addService;
     static Division divService;
+    static Subtraction subService;
+    static Multiplication multService;
 
-    private static int sum(int a, int b) throws Exception
-    {
+    private static int sum(int a, int b) throws Exception {
         return addService.Add(a,b);
     }
 
-    private static int sub(int a, int b) throws Exception{
-        return divService.Div(a, b);
+    private static int sub(int a, int b) throws Exception {
+        return subService.Sub(b, a);
     }
 
-    private static int mult(int a, int b) { return a*b; }
+    private static int mult(int a, int b) throws Exception {
+        return multService.Multi(a, b);
+    }
 
-    private static int div(int a, int b) { return b/a; }
+    private static int div(int a, int b) throws Exception {
+        return divService.Div(b, a);
+    }
 
     private static int calc(String str)
     {
@@ -45,11 +50,19 @@ public class RemoteCalculationServiceImpl implements RemoteCalculationService {
                     break;
                 case "-":
                     // вызов удаленного метода
-                    stack.push(sub(stack.pop(), stack.pop()));
+                    try {
+                        stack.push(sub(stack.pop(), stack.pop()));
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                     break;
                 case "*":
                     // вызов удаленного метода
-                    stack.push(mult(stack.pop(), stack.pop()));
+                    try {
+                        stack.push(mult(stack.pop(), stack.pop()));
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                     break;
                 case "/":
                     // вызов удаленного метода
@@ -80,15 +93,19 @@ public class RemoteCalculationServiceImpl implements RemoteCalculationService {
 
     private static void RegistryServices() throws Exception{
         final String middlewareHost = "localhost";
-        Registry registryOperations = LocateRegistry.getRegistry(middlewareHost, 2100);
-
+        Registry registryOperations = LocateRegistry.getRegistry(middlewareHost, 2101);
         addService = (Addition) registryOperations.lookup("sample/Addition");
+        registryOperations = LocateRegistry.getRegistry(middlewareHost, 2102);
+        subService = (Subtraction) registryOperations.lookup("sample/Subtraction");
+        registryOperations = LocateRegistry.getRegistry(middlewareHost, 2103);
+        multService = (Multiplication) registryOperations.lookup("sample/Multiplication");
+        registryOperations = LocateRegistry.getRegistry(middlewareHost, 2104);
         divService = (Division) registryOperations.lookup("sample/Division");
     }
 
     public static void main(String... args) throws Exception {
         System.out.print("Starting registry...");
-        final Registry registry = LocateRegistry.createRegistry(2099);
+        final Registry registry = LocateRegistry.createRegistry(2100);
         System.out.println(" OK");
 
         final RemoteCalculationService service = new RemoteCalculationServiceImpl();

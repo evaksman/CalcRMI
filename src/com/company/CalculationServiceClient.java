@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class CalculationServiceClient {
     public static void main(String... args) throws Exception {
         System.out.print("Starting registry client...");
-        Registry registry = LocateRegistry.getRegistry("localhost", 2099);
+        Registry registry = LocateRegistry.getRegistry("localhost", 2100);
         RemoteCalculationService service = (RemoteCalculationService) registry.lookup("sample/CalcService");
         System.out.println("OK");
 

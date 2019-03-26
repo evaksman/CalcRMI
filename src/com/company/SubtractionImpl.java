@@ -16,7 +16,7 @@ public class SubtractionImpl implements Subtraction {
 
     public static void main(String... args) throws Exception {
         System.out.print("Starting registry Subtraction...");
-        final Registry registry = LocateRegistry.createRegistry(2100);
+        final Registry registry = LocateRegistry.createRegistry(2102);
         System.out.println(" OK");
 
         final Subtraction service = new SubtractionImpl();

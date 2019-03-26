@@ -16,7 +16,7 @@ public class DivisionImpl implements Division {
 
     public static void main(String... args) throws Exception {
         System.out.print("Starting registry division...");
-        final Registry registry = LocateRegistry.createRegistry(2100);
+        final Registry registry = LocateRegistry.createRegistry(2104);
         System.out.println(" OK");
 
         final Division service = new DivisionImpl();

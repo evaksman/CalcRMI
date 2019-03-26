@@ -15,7 +15,7 @@ public class MultiplicationImpl implements Multiplication {
 
     public static void main(String... args) throws Exception {
         System.out.print("Starting registry multiplication...");
-        final Registry registry = LocateRegistry.createRegistry(2100);
+        final Registry registry = LocateRegistry.createRegistry(2103);
         System.out.println(" OK");
 
         final Multiplication service = new MultiplicationImpl();

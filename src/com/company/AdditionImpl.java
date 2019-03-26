@@ -16,7 +16,7 @@ public class AdditionImpl implements Addition {
 
     public static void main(String... args) throws Exception {
         System.out.print("Starting registry addition...");
-        final Registry registry = LocateRegistry.createRegistry(2100);
+        final Registry registry = LocateRegistry.createRegistry(2101);
         System.out.println(" OK");
 
         final Addition service = new AdditionImpl();
