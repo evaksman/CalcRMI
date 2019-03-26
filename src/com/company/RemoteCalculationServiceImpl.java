@@ -72,7 +72,7 @@ public class RemoteCalculationServiceImpl implements RemoteCalculationService {
         String str = "";
         //String str = "6,10,+,4,-,1,1,2,*,+,/,1,+";
         //String str2 = "8,2,5,*,+,1,3,2,*,+,4,-,/";
-        //str = ОбратнаяПолЗапись(exp);
+        str = new ReversePolishNotationService().Convert(exp);
         res = calc(str);
         return res;
     }
