@@ -10,16 +10,13 @@ public class RemoteCalculationServiceImpl implements RemoteCalculationService {
 
     public static final String BINDING_NAME = "sample/CalcService";
     static Addition addService;
-    static Division divService;
 
     private static int sum(int a, int b) throws Exception
     {
         return addService.Add(a,b);
     }
 
-    private static int sub(int a, int b) throws Exception{
-        return divService.Div(a, b);
-    }
+    private static int sub(int a, int b) { return b-a; }
 
     private static int mult(int a, int b) { return a*b; }
 
@@ -53,11 +50,7 @@ public class RemoteCalculationServiceImpl implements RemoteCalculationService {
                     break;
                 case "/":
                     // вызов удаленного метода
-                    try {
-                        stack.push(div(stack.pop(), stack.pop()));
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
+                    stack.push(div(stack.pop(), stack.pop()));
                     break;
                 default:
                     stack.push(Integer.valueOf(s.toString()));
@@ -72,18 +65,14 @@ public class RemoteCalculationServiceImpl implements RemoteCalculationService {
         String str = "";
         //String str = "6,10,+,4,-,1,1,2,*,+,/,1,+";
         //String str2 = "8,2,5,*,+,1,3,2,*,+,4,-,/";
-        str = new ReversePolishNotationService().Convert(exp);
-        res = calc(str);
-
+        //str = ОбратнаяПолЗапись(exp);
+        res = calc(exp);
         return res;
     }
 
     private static void RegistryServices() throws Exception{
-        final String middlewareHost = "localhost";
-        Registry registryOperations = LocateRegistry.getRegistry(middlewareHost, 2100);
-
+        Registry registryOperations = LocateRegistry.getRegistry("localhost", 2100);
         addService = (Addition) registryOperations.lookup("sample/Addition");
-        divService = (Division) registryOperations.lookup("sample/Division");
     }
 
     public static void main(String... args) throws Exception {
