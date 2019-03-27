@@ -36,7 +36,7 @@ public class CalculationServiceClient {
     private static void registryService() throws RemoteException, NotBoundException {
         System.out.print("Starting registry client...");
 
-        Registry registry = LocateRegistry.getRegistry("localhost", 2099);
+        Registry registry = LocateRegistry.getRegistry("localhost", 2100);
         service = (RemoteCalculationService) registry.lookup("sample/CalcService");
 
         System.out.println("OK");
